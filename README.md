@@ -2,7 +2,7 @@
 
 Telegram-бот для отслеживания цен криптовалют в реальном времени.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://img.shields.io/badge/Python-3.13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## 📋 Описание
@@ -119,7 +119,7 @@ MIT License - можете свободно использовать и моди
 
 ## 👨‍💻 Автор
 
-[Vladislav] - [@vvlaarnb]
+Vladislav - Tg @vvlaarnb 
 
 ---
 
