@@ -24,11 +24,14 @@ dp.message.register(cmd_msg)
 async def main() -> None:
     bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 
-    # Удаляем предыдущие сообщения
-    await bot.delete_webhook(drop_pending_updates=True)
-
-    # Запуск опроса серверов
-    await dp.start_polling(bot)
+    try:
+        # Пропускаем старые сообщения при запуске
+        await bot.delete_webhook(drop_pending_updates=True)
+        # Запускаем опрос серверов Telegram
+        await dp.start_polling(bot)
+    finally:
+        # Закрываем сессию бота при завершении работы
+        await bot.session.close()
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
